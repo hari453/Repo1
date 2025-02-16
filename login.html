@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent - Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #E74C3C; /* Matching the logo's background color */
+        }
+        .header {
+            background-color: #C0392B;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+        .header h2 {
+            color: white;
+            margin: 0;
+        }
+        .login-link {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .login-container, .signup-container {
+            background: white;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            margin: 80px auto;
+        }
+        .hidden {
+            display: none;
+        }
+        input {
+            display: block;
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 15px auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #C0392B;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            width: calc(100% - 20px);
+            margin: 10px auto;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #A93226;
+        }
+        .separator {
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        .google-signup, .mobile-signup {
+            margin-top: 15px;
+            display: block;
+        }
+        .signup-container button {
+            margin-top: 20px; /* Added space between Sign Up and Back to Login */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>Agent</h2>
+        <a href="index.html" class="login-link">Main Page</a>
+    </div>
+
+    <div class="login-container">
+        <h2>Login to Agent</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Username or Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <div class="separator">OR</div>
+        <button class="google-signup" onclick="googleSignUp()">Sign up with Google</button>
+        <button class="mobile-signup" onclick="showMobileSignup()">Sign up with Mobile</button>
+        <p>Don't have an account? <a href="#" onclick="showSignupForm()">Create one</a></p>
+    </div>
+
+    <!-- Signup Form -->
+    <div class="signup-container hidden" id="signupContainer">
+        <h2>Create an Account</h2>
+        <form id="signupForm">
+            <input type="text" id="newUsername" placeholder="Username" required>
+            <input type="email" id="newEmail" placeholder="Email" required>
+            <input type="password" id="newPassword" placeholder="Password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+        <button onclick="hideSignupForm()">Back to Login</button>
+    </div>
+
+    <script>
+        function googleSignUp() {
+            alert("Google Sign-Up Clicked");
+        }
+        function showMobileSignup() {
+            alert("Mobile Sign-Up Clicked");
+        }
+        function showSignupForm() {
+            document.getElementById("signupContainer").classList.remove("hidden");
+            document.querySelector(".login-container").classList.add("hidden");
+        }
+        function hideSignupForm() {
+            document.getElementById("signupContainer").classList.add("hidden");
+            document.querySelector(".login-container").classList.remove("hidden");
+        }
+    </script>
+</body>
+</html>
+
+

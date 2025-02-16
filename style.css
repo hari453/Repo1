@@ -1,0 +1,175 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    text-align: center;
+    color: white;
+}
+
+/* HEADER */
+header {
+    background-color: #e74c3c;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* Login Button (Top-Right Corner) */
+.login-link {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+.login-link a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.login-link a:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Top Section: Centered Logo and Title */
+.top-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    gap: 15px;
+}
+
+/* Circular Logo */
+.logo-container {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Logo Image */
+.logo {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Agent Title */
+.title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.8);
+    white-space: nowrap;
+}
+
+/* Welcome Text */
+.welcome-text {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    width: 100%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Navigation Menu */
+.nav-menu {
+    margin-top: 20px;
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-menu li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+/* Navigation Links */
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    transition: 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-menu a:hover, .nav-menu a.active {
+    border-bottom: 2px solid white;
+}
+
+/* Sidebar */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.4s;
+    padding-top: 60px;
+}
+
+.sidebar.open {
+    width: 250px;
+}
+
+.sidebar a {
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+
+.menu-icon:hover {
+    color: #ddd;
+}

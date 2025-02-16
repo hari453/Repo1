@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent</title>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="top-section">
+        <!-- Login Link (Top-Right) -->
+        <div class="login-link">
+            <a href="login.html">Login</a>
+        </div>
+
+        <!-- Hamburger Menu Button -->
+        <div class="menu-icon" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        
+        <div class="logo-container">
+            <img src="agent-high-resolution-logo.png" alt="Agent Logo" class="logo">
+        </div>
+        <h1 class="title">Agent</h1>
+    </div>
+
+    <p class="welcome-text">Welcome to the Agent Website</p>
+
+    <!-- Navigation Menu (Main Page) -->
+    <nav class="nav-menu">
+        <ul>
+            <li><a href="#" id="home-link" class="nav-link active"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="#" id="location-link" class="nav-link"><i class="fa-solid fa-globe"></i> Location</a></li>
+            <li><a href="#" id="support-link" class="nav-link"><i class="fa-solid fa-user"></i> Support</a></li>
+            <li><a href="#" id="registration-link" class="nav-link"><i class="fa-solid fa-file-alt"></i> Registration Status</a></li>
+            <li><a href="#" id="query-link" class="nav-link"><i class="fa-solid fa-ticket"></i> Query</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Sidebar Navigation -->
+<div id="sidebar" class="sidebar">
+    <a href="javascript:void(0)" class="close-btn" onclick="toggleMenu()">
+        <i class="fa-solid fa-times"></i>
+    </a>
+    <a href="#" onclick="selectSection('home-link')"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="#" onclick="selectSection('location-link')"><i class="fa-solid fa-globe"></i> Location</a>
+    <a href="#" onclick="selectSection('support-link')"><i class="fa-solid fa-user"></i> Support</a>
+    <a href="#" onclick="selectSection('registration-link')"><i class="fa-solid fa-file-alt"></i> Registration Status</a>
+    <a href="#" onclick="selectSection('query-link')"><i class="fa-solid fa-ticket"></i> Query</a>
+</div>
+
+<!-- Include External JavaScript -->
+<script src="scrpt.js"></script>
+
+</body>
+</html>
