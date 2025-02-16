@@ -117,7 +117,8 @@ header {
     border-bottom: 2px solid transparent;
 }
 
-.nav-menu a:hover, .nav-menu a.active {
+.nav-menu a:hover,
+.nav-menu a.active {
     border-bottom: 2px solid white;
 }
 
@@ -172,4 +173,10 @@ header {
 
 .menu-icon:hover {
     color: #ddd;
+}
+
+@media (max-width: 1250px) {
+    nav{
+        display: none;
+    }
 }
